@@ -18,6 +18,7 @@ public class ContaCorrente
   
   public void Depositar(double valor){
     this.saldo += valor;
+    Console.WriteLine("Depositou");
   }
   
   public bool Transferir(double valor, ContaCorrente contaDestino){
