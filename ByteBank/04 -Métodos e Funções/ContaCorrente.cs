@@ -7,7 +7,7 @@ public class ContaCorrente
   public int numero;
   public double saldo = 100;
   
-  public bool sacar(double valor){
+  public bool Sacar(double valor){
     if(this.saldo < valor){
       return false;
     }else{
@@ -16,7 +16,7 @@ public class ContaCorrente
     }
   }
   
-  public bool depositar(double valor){
+  public bool Depositar(double valor){
     this.saldo += valor;
     return true;
   }
