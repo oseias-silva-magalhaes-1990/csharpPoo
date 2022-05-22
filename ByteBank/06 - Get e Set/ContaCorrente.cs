@@ -9,18 +9,23 @@ namespace _06_ByteBank
 		  public int numero;
 		  private double saldo = 100;
 		
-		  public double GetSaldo(){
-			return this.saldo;
-		  }
-		
-		  public void SetSaldo(double saldo){
-		  	if(saldo < 0)
+		public double Saldo
+		{
+			get
+			{
+				return this.saldo;
+			}
+			
+			set
+			{
+				if(value < 0)
 			{
 				Console.WriteLine("Erro! Saldo negativo atribuído!");
 				return;	
 			}
-			this.saldo = saldo;
-		  }
+				this.saldo = value; 
+			}
+		}
 
 		  public bool Sacar(double valor){
 			  
