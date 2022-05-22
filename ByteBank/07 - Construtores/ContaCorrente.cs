@@ -8,6 +8,11 @@ namespace _07_ByteBank
 		public int Agencia{get; set;}
 		public int Numero{get; set;}
 		
+		public ContaCorrente(int agencia, int numero){
+			Agencia = agencia;
+			Numero = numero;
+		}
+		
 		private double _saldo = 100;
 		public double Saldo
 		{
