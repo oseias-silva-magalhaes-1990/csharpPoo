@@ -4,8 +4,8 @@ namespace _06_ByteBank
 {
   public class Cliente
   {
-    public string nome;
-    public string cpf;
-    public string profissao;
+    public string Nome{get; set;}
+    public string CPF{get; set;}
+    public string Profissão{get; set;}
   }
 }
