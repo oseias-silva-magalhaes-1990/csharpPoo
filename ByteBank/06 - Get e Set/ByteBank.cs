@@ -6,10 +6,10 @@ namespace _06_ByteBank
   {
     static void Main (string[] args)
     {
-        ContaCorrente conta1 = new ContaCorrente();
-        conta1.Saldo = -10;
+        ContaCorrente conta = new ContaCorrente();
+        conta.Saldo = -10;
         
-        Console.WriteLine(conta1.Saldo);
+        Console.WriteLine(conta.Saldo);
         Console.ReadLine();
     }
   }
