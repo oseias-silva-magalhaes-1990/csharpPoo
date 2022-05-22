@@ -7,7 +7,7 @@ namespace _06_ByteBank
     static void Main (string[] args)
     {
         ContaCorrente conta1 = new ContaCorrente();
-        //conta1.saldo = -10;
+        conta1.DefinirSaldo(-10);
         
         Console.WriteLine(conta1.saldo);
         Console.ReadLine();
