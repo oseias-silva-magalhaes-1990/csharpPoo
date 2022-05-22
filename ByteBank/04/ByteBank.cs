@@ -10,7 +10,12 @@ namespace _04_ByteBank
 			conta1.titular = "Gabriela";
 			conta1.agencia = 863;
 			conta1.numero = 863452;
-			conta1.saldo = 100.50;			
+			
+	    		conta1.depositar(100.0);
+            		Console.WriteLine("Saldo: " + conta1.saldo);
+            
+            		conta1.sacar(50.0);
+            		Console.WriteLine("Saldo: " + conta1.saldo);
 
 			Console.ReadLine();
 		}
