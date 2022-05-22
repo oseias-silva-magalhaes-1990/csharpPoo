@@ -4,10 +4,16 @@ namespace _06_ByteBank
 {
 	public class ContaCorrente
 	{
-		  public Cliente titular;
-		  public int agencia;
-		  public int numero;
-		  private double _saldo = 100;
+		private Cliente _titular;
+		private int _agencia;
+		private int _numero;
+		private double _saldo = 100;
+		
+		public Cliente Titular {get; set;}
+		
+		public int Agencia{get; set;}
+		
+		public int Numero{get; set;}
 		
 		public double Saldo
 		{
@@ -15,7 +21,6 @@ namespace _06_ByteBank
 			{
 				return this._saldo;
 			}
-			
 			set
 			{
 				if(value < 0)
