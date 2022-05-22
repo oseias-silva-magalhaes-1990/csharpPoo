@@ -1,3 +1,5 @@
+using System;
+
 namespace _01_ByteBank
 {
   class Program
@@ -8,10 +10,10 @@ namespace _01_ByteBank
       conta.titular = "Gabriela";
       conta.agencia = 863;
       conta.numero = 863452;
-      conta.saldo = 100.0;
+      conta.saldo = 200.0;
       
       Console.WriteLine("Nome: " + conta.titular);
-	  Console.WriteLine("Agência: " + conta.agencia);
+      Console.WriteLine("Agência: " + conta.agencia);
       Console.WriteLine("Conta: " + conta.numero);
       Console.WriteLine("Saldo: " + conta.saldo);
       
