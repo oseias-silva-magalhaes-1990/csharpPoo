@@ -7,7 +7,11 @@ namespace _06_ByteBank
 		  public Cliente titular;
 		  public int agencia;
 		  public int numero;
-		  public double saldo = 100;
+		  private double saldo = 100;
+		
+		  public double ObterSaldo(){
+			  return this.saldo;
+		  }
 
 		  public bool Sacar(double valor){
 			if(this.saldo < valor){
