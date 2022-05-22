@@ -11,10 +11,10 @@ namespace _04_ByteBank
 			conta.agencia = 863;
 			conta.numero = 863452;
 			
-	    		Console.WriteLine("Depositou? " + conta1.depositar(100.0));
+	    		Console.WriteLine("Depositou? " + conta1.Depositar(100.0));
             		Console.WriteLine("Saldo: " + conta1.saldo);
             
-            		Console.WriteLine("Sacou? " + conta1.sacar(50.0));
+            		Console.WriteLine("Sacou? " + conta1.Sacar(50.0));
             		Console.WriteLine("Saldo: " + conta1.saldo);
 
 			Console.ReadLine();
