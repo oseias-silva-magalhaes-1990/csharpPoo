@@ -1,6 +1,6 @@
 using System;
 
-namespace _01_ByteBank
+namespace _03_ByteBank
 {
   class Program
   {
