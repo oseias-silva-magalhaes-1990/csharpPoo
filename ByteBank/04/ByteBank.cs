@@ -6,16 +6,16 @@ namespace _04_ByteBank
   {
     static void Main (string[] args)
 		{
-			ContaCorrente conta1 = new ContaCorrente();
-			conta1.titular = "Gabriela";
-			conta1.agencia = 863;
-			conta1.numero = 863452;
+			ContaCorrente conta = new ContaCorrente();
+			conta.titular = "Gabriela";
+			conta.agencia = 863;
+			conta.numero = 863452;
 			
-	    		conta1.depositar(100.0);
-            		Console.WriteLine("Saldo: " + conta1.saldo);
+	    		conta.depositar(100.0);
+            		Console.WriteLine("Saldo: " + conta.saldo);
             
-            		conta1.sacar(50.0);
-            		Console.WriteLine("Saldo: " + conta1.saldo);
+            		conta.sacar(50.0);
+            		Console.WriteLine("Saldo: " + conta.saldo);
 
 			Console.ReadLine();
 		}
