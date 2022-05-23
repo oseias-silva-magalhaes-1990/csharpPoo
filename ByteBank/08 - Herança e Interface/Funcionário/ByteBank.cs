@@ -1,5 +1,4 @@
 using system;
-using ByteBank.Funcionarios;
 
 namespace ByteBank
 {
