@@ -14,6 +14,7 @@ namespace ByteBank
     {
       CPF = cpf;
       TotalDeFuncionarios++;
+      console.WriteLine("Criando um Funcionário");
     }
     
     public virtual double GetBonificacao()//Definindo como virtual o método pode ser utilziado por uma classe derivada e sofrer mudanças em sua estrutura
