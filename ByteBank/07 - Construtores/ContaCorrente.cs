@@ -7,7 +7,7 @@ namespace _07_ByteBank
 		public Cliente Titular {get; set;}
 		
 		private static int TotalDeContasCriadas {get; private set;}//Membro Estático - Característica da Classe
-		
+		//Método Get público e Set privado
 		
 		public int Agencia{get; set;}
 		public int Numero{get; set;}
