@@ -5,6 +5,9 @@ namespace _07_ByteBank
 	public class ContaCorrente
 	{
 		public Cliente Titular {get; set;}
+		
+		public int TotalDeContasCriadas {get; set;}
+		
 		public int Agencia{get; set;}
 		public int Numero{get; set;}
 		
