@@ -15,6 +15,7 @@ namespace ByteBank
       
       gerenciador.Registrar(func);
       
+      //O objeto dire é originado a partir da classe Diretor() que é um polimorfismo da classe Funcionario()
       Diretor dire = new Diretor();//Atalho para coreção de Biblioteca (ctrl + . + enter)
       dire.Nome = "Roberta";
       dire.CPF = "374.731.747-36";
