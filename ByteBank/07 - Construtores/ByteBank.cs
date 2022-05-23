@@ -7,6 +7,9 @@ namespace _07_ByteBank
     static void Main (string[] args)
     {
         ContaCorrente conta = new ContaCorrente(867, 315253);
+      
+        Console.WriteLine(conta.Agencia);
+        Console.WriteLine(conta.Numero);
 
     }
   }
