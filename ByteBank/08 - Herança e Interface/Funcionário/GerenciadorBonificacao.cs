@@ -11,10 +11,6 @@ namespace ByteBank
       _totalBonificacao += func.GetBonificacao();
     }
     
-    public void Registrar(Diretor dire){
-      _totalBonificacao += dire.GetBonificacao();
-    }
-    
     public double GetTotalBonificacao(){
       return _totalBonificacao;
     }
