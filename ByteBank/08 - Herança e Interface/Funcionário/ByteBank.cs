@@ -29,6 +29,8 @@ namespace ByteBank
       Console.WriteLine(dire.Nome);
       Console.WriteLine(dire.GetBonificacao());
       
+      Console.WriteLine("Total de bonificações:" + gerenciador.GetBonificacao());
+      
       Console.ReadLine();
       
     }
