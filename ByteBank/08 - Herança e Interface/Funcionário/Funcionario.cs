@@ -8,11 +8,13 @@ namespace ByteBank
     
     public string Nome {get; set;}
     public string CPF {get; private set;}
-    public double Salario {get; set;}
+    public double Salario {get; private set;}
     
-    public Funcionario(string cpf)
+    public Funcionario(double salario, string cpf)
     {
       CPF = cpf;
+      Salario = salario;
+      
       TotalDeFuncionarios++;
       console.WriteLine("Criando um Funcionário");
     }
