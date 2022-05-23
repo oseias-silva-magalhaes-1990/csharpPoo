@@ -8,7 +8,7 @@ namespace _07_ByteBank
 		
 		private static int TotalDeContasCriadas {get; set;}//Membro Estático - Característica da Classe
 		
-		public int ObterTotalDeContasCriadas(){
+		public static int ObterTotalDeContasCriadas(){
 			return TotalDeContasCriadas;
 		}
 		
