@@ -3,7 +3,7 @@ using ByteBank.Funcionarios;
 
 namespace ByteBank
 {
-  clas Program
+  class Program
   {
     static void Main(string[] args)
     {
@@ -12,6 +12,7 @@ namespace ByteBank
       func.CPF = "379.721.748-25";
       func.Salario = 2000;
       
+      Console.WriteLine(func.Nome);
       Console.WriteLine(func.GetBonificacao());
       
       Console.ReadLine();
