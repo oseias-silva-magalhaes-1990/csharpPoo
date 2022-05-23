@@ -6,7 +6,11 @@ namespace _07_ByteBank
 	{
 		public Cliente Titular {get; set;}
 		
-		public static int TotalDeContasCriadas {get; set;}//Membro Estático - Característica da Classe
+		private static int TotalDeContasCriadas {get; set;}//Membro Estático - Característica da Classe
+		
+		public int ObterTotalDeContasCriadas(){
+			return TotalDeContasCriadas;
+		}
 		
 		public int Agencia{get; set;}
 		public int Numero{get; set;}
