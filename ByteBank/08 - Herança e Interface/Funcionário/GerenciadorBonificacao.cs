@@ -15,7 +15,7 @@ namespace ByteBank
       _totalBonificacao += dire.GetBonificacao();
     }
     
-    public double TotalBonificacao(){
+    public double GetTotalBonificacao(){
       return _totalBonificacao;
     }
     
