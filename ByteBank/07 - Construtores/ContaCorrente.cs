@@ -6,7 +6,7 @@ namespace _07_ByteBank
 	{
 		public Cliente Titular {get; set;}
 		
-		public int TotalDeContasCriadas {get; set;}
+		public static int TotalDeContasCriadas {get; set;}//Membro Estático
 		
 		public int Agencia{get; set;}
 		public int Numero{get; set;}
