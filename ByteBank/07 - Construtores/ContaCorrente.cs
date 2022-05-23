@@ -6,7 +6,7 @@ namespace _07_ByteBank
 	{
 		public Cliente Titular {get; set;}
 		
-		public static int TotalDeContasCriadas {get; set;}//Membro Estático
+		public static int TotalDeContasCriadas {get; set;}//Membro Estático - Característica da Classe
 		
 		public int Agencia{get; set;}
 		public int Numero{get; set;}
@@ -14,6 +14,7 @@ namespace _07_ByteBank
 		public ContaCorrente(int agencia, int numero){
 			Agencia = agencia;
 			Numero = numero;
+			TotalDeContasCriadas++;
 		}
 		
 		private double _saldo = 100;
