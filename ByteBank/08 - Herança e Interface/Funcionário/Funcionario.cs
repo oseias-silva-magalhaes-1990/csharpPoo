@@ -21,5 +21,10 @@ namespace ByteBank
     {
       return Salario * 0.10;
     }
+    
+    public void AumentarSalario()
+    {
+      Salario *= 1.1;
+    }
   }
 }
