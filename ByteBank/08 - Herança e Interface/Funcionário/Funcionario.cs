@@ -22,7 +22,7 @@ namespace ByteBank
       return Salario * 0.10;
     }
     
-    public void AumentarSalario()
+    public virtual void AumentarSalario()
     {
       Salario *= 1.1;
     }
