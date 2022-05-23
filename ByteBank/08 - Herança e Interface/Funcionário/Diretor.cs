@@ -1,6 +1,6 @@
 using System;
 
-namespace ByteBank.Funcionarios
+namespace ByteBank
 {
   public class Diretor : Funcionario //Herança - herda atributos da classe base
   {
