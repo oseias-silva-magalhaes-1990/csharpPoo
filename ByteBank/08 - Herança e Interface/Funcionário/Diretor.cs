@@ -2,15 +2,13 @@ using System;
 
 namespace ByteBank.Funcionarios
 {
-  public class Diretor
+  public class Diretor : Funcionario //Herança - herda atributos da classe base
   {
-    public string Nome {get; set;}
-    public string CPF {get; set;}
-    public double Salario {get; set;}
-    
+  
     public double GetBonificacao()
     {
       return Salario;
     }
+    
   }
 }
