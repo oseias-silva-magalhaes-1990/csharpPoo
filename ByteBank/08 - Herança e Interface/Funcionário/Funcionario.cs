@@ -1,6 +1,6 @@
 using System;
 
-namespace ByteBank.Funcionarios
+namespace ByteBank
 {
   public class Funcionario
   {
