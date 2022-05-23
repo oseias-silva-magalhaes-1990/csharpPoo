@@ -8,17 +8,15 @@ namespace ByteBank
     {
       GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
       
-      Funcionario func = new Funcionario();//Atalho para coreção de Biblioteca (ctrl + . + enter)
+      Funcionario func = new Funcionario("379.721.748-25");//Atalho para coreção de Biblioteca (ctrl + . + enter)
       func.Nome = "Carlos";
-      func.CPF = "379.721.748-25";
       func.Salario = 2000;
       
       gerenciador.Registrar(func);
       
       //O objeto dire é originado a partir da classe Diretor() que é um polimorfismo da classe Funcionario()
-      Diretor dire = new Diretor();//Atalho para coreção de Biblioteca (ctrl + . + enter)
+      Diretor dire = new Diretor("374.731.747-36");//Atalho para coreção de Biblioteca (ctrl + . + enter)
       dire.Nome = "Roberta";
-      dire.CPF = "374.731.747-36";
       dire.Salario = 5000;
       
       gerenciador.Registrar(dire);
