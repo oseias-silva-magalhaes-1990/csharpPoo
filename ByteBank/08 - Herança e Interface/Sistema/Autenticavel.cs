@@ -3,9 +3,13 @@ using ByteBank.Funcionario;
 
 namespace ByteBank.Sistema
 {
- public class Autenticavel
+ public abstract class Autenticavel: Funcionario
   {
     public string Senha {get; set;}
+    
+    public Autenticavel(double salario, string cpf) : base(salario, cpf)
+    {
+    }
     
     public bool Autenticar(string senha)
     {
