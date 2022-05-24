@@ -24,6 +24,12 @@ namespace ByteBank
       
       sistemaInterno.Logar(roberta, "123");
       sistemaInterno.Logar(roberta, "abc");
+      
+      GerenteDeConta camila = new GerenteDeConta("326.985.628-89");
+      camila.Nome = "Camila";
+      
+      sistemaInterno.Logar(camila, "123");
+      sistemaInterno.Logar(camila, "abc");
     }
     
     public static void CalcularBonificacao()
