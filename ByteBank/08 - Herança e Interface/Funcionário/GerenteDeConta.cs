@@ -4,6 +4,12 @@ namespace ByteBank.Funcionario
 {
   public class GerenteDeConta : Funcionario //Herança - herda atributos da classe base
   {
+    public string Senha{get; set;}
+  
+    public bool Autenticar(string senha){
+      return Senha == senha;
+    }
+    
     
     public GerenteDeConta(string cpf) : base (4000, cpf)//Atribuição de parâmetro para obedecer regra do construtor da classe base
     {
