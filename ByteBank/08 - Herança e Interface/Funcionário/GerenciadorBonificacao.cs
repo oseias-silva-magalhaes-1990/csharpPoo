@@ -1,6 +1,6 @@
 using System;
 
-namespace ByteBank
+namespace ByteBank.Funcionario
 {
   public class GerenciadorBonificacao
   {
