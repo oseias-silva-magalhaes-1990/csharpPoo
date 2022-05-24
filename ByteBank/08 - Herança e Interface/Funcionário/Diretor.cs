@@ -5,7 +5,7 @@ namespace ByteBank
   public class Diretor : Funcionario //Herança - herda atributos da classe base
   {
     
-    public Diretor(double salario, string cpf) : base (salario, cpf)//Atribuição de parâmetro para obedecer regra do construtor da classe base
+    public Diretor(string cpf) : base (5000, cpf)//Atribuição de parâmetro para obedecer regra do construtor da classe base
     {
       Console.WriteLine("Criando um Diretor");
     }
