@@ -3,11 +3,11 @@ using ByteBank.Funcionario;
 
 namespace ByteBank.Sistema
 {
- public class SistemaInterno
+ public class Autenticavel
   {
     public string Senha {get; set;}
     
-    public bool Autentica(string senha)
+    public bool Autenticar(string senha)
     {
       return Senha == senha;
     }
