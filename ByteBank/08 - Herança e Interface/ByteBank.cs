@@ -1,6 +1,7 @@
 using System;
+using ByteBank.Funcionario;
 
-namespace ByteBank.Funcionario
+namespace ByteBank
 {
   class Program
   {
