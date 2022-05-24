@@ -1,6 +1,6 @@
 using System;
 
-namespace Bytebank.Fucnionarios
+namespace Bytebank.Funcionarios
 {
   public abstract class FuncionarioAutenticavel : Funcionario, Autenticavel
   {
