@@ -6,9 +6,9 @@ namespace ByteBank
   {
     public static int TotalDeFuncionarios{get; private set;}
     
-    public string Nome {get; set;}
-    public string CPF {get; private set;}
-    public double Salario {get; protected set;}
+    public string Nome {get; set;}//public - visível em todo lugar;
+    public string CPF {get; private set;}//private - apenas visível dentro da classe;
+    public double Salario {get; protected set;}//protected - visível dentro da classe e também para as filhas;
     
     public Funcionario(double salario, string cpf)
     {
