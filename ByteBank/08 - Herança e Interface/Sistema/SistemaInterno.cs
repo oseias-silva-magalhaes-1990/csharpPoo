@@ -19,5 +19,21 @@ namespace ByteBank.Sistema
         return false;
       }
     }
+    
+    public bool Logar(GerenteDeConta funcionario, string senha)
+    {
+      bool usuarioAutenticado = funcionario.Autenticar(senha);
+      
+      if (usuarioAutenticado){
+        Console.WriteLine("Bem vindo ao Sistema!");
+        return true;
+      }
+      else
+      {
+        Console.WriteLine("Login/Senha Incorreta!");
+        return false;
+      }
+    }
+    
   }
 }
