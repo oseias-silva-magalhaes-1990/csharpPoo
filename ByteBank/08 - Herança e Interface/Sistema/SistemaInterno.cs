@@ -1,7 +1,7 @@
 using System;
 using ByteBank.Funcionario;
 
-namespace ByteBank.SistemaInterno
+namespace ByteBank.Sistema
 {
  public class SistemaInterno
   {
