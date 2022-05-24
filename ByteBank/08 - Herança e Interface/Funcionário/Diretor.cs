@@ -3,7 +3,7 @@ using ByteBank.Sistema;
 
 namespace ByteBank.Funcionario
 {
-  public class Diretor : Funcionario, Autenticavel //Herança - herda atributos da classe base
+  public class Diretor : FuncionarioAutenticavel //Herança - herda atributos da classe base
   {
     public string Senha {get; set;}
     
