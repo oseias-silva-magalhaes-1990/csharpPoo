@@ -16,7 +16,7 @@ namespace ByteBank.Funcionario
       Salario = salario;
       
       TotalDeFuncionarios++;
-      console.WriteLine("Criando um Funcionário");
+      Console.WriteLine("Criando um Funcionário");
     }
     
     public abstract double GetBonificacao();
