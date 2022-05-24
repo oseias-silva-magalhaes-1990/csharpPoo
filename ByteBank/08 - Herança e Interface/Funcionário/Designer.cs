@@ -5,7 +5,7 @@ namespace ByteBank
   public class Designer : Funcionario //Herança - herda atributos da classe base
   {
     
-    public Designer(double salario, string cpf) : base (3000, cpf)//Atribuição de parâmetro para obedecer regra do construtor da classe base
+    public Designer(string cpf) : base (3000, cpf)//Atribuição de parâmetro para obedecer regra do construtor da classe base
     {
       Console.WriteLine("Criando um Designer");
     }
