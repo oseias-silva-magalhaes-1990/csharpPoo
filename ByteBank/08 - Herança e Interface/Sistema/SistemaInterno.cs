@@ -5,7 +5,7 @@ namespace ByteBank.Sistema
 {
  public class SistemaInterno
   {
-    public bool Logar(Diretor funcionario, string senha)
+    public bool Logar(Autenticavel funcionario, string senha)
     {
       bool usuarioAutenticado = funcionario.Autenticar(senha);
       
@@ -19,21 +19,5 @@ namespace ByteBank.Sistema
         return false;
       }
     }
-    
-    public bool Logar(GerenteDeConta funcionario, string senha)
-    {
-      bool usuarioAutenticado = funcionario.Autenticar(senha);
-      
-      if (usuarioAutenticado){
-        Console.WriteLine("Bem vindo ao Sistema!");
-        return true;
-      }
-      else
-      {
-        Console.WriteLine("Login/Senha Incorreta!");
-        return false;
-      }
-    }
-    
   }
 }
