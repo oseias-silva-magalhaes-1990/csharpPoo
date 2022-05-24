@@ -5,7 +5,7 @@ namespace ByteBank
   public class Auxiliar : Funcionario //Herança - herda atributos da classe base
   {
     
-    public Auxiliar(double salario, string cpf) : base (2000, cpf)//Atribuição de parâmetro para obedecer regra do construtor da classe base
+    public Auxiliar(string cpf) : base (2000, cpf)//Atribuição de parâmetro para obedecer regra do construtor da classe base
     {
       Console.WriteLine("Criando um Auxiliar");
     }
