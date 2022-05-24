@@ -1,6 +1,6 @@
 using System;
 
-namespace ByteBank
+namespace ByteBank.Funcionario
 {
   public abstract class Funcionario//Classe abstrata pois não deve ser instanciada
   {
@@ -19,6 +19,11 @@ namespace ByteBank
       console.WriteLine("Criando um Funcionário");
     }
     
+    public abstract double GetBonificacao();
+    
+    public abstract void AumentarSalario();
+      
+    /*
     public virtual double GetBonificacao()//Definindo como virtual o método pode ser utilziado por uma classe derivada e sofrer mudanças em sua estrutura
     {
       return Salario * 0.10;
@@ -28,5 +33,7 @@ namespace ByteBank
     {
       Salario *= 1.1;
     }
+    */
+    
   }
 }
