@@ -2,7 +2,7 @@ using System;
 
 namespace ByteBank
 {
-  public class Funcionario
+  public abstract class Funcionario//Classe abstrata pois não deve ser instanciada
   {
     public static int TotalDeFuncionarios{get; private set;}
     
