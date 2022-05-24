@@ -1,6 +1,6 @@
 using System;
 
-namespace ByteBank
+namespace ByteBank.Funcionario
 {
   public class Designer : Funcionario //Herança - herda atributos da classe base
   {
