@@ -1,8 +1,9 @@
 using System;
+using ByteBank.Sistema;
 
 namespace ByteBank.Funcionario
 {
-  public class GerenteDeConta : Funcionario //Herança - herda atributos da classe base
+  public class GerenteDeConta : Autenticavel //Herança - herda atributos da classe base
   {
   
     public GerenteDeConta(string cpf) : base (4000, cpf)//Atribuição de parâmetro para obedecer regra do construtor da classe base
