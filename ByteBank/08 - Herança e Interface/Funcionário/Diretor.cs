@@ -1,8 +1,9 @@
 using System;
+using ByteBank.Sistema;
 
 namespace ByteBank.Funcionario
 {
-  public class Diretor : Funcionario //Herança - herda atributos da classe base
+  public class Diretor : Autenticavel //Herança - herda atributos da classe base
   {
     
     public Diretor(string cpf) : base (5000, cpf)//Atribuição de parâmetro para obedecer regra do construtor da classe base
