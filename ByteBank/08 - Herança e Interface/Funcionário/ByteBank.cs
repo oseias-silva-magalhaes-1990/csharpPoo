@@ -1,4 +1,4 @@
-using system;
+using System;
 
 namespace ByteBank
 {
@@ -6,30 +6,33 @@ namespace ByteBank
   {
     static void Main(string[] args)
     {
-      GerenciadorBonificacao gerenciador = new GerenciadorBonificacao();
-      
-      Funcionario func = new Funcionario("379.721.748-25");//Atalho para coreção de Biblioteca (ctrl + . + enter)
-      func.Nome = "Carlos";
-      func.Salario = 2000;
-      
-      gerenciador.Registrar(func);
-      
-      //O objeto dire é originado a partir da classe Diretor() que é um polimorfismo da classe Funcionario()
-      Diretor dire = new Diretor("374.731.747-36");//Atalho para coreção de Biblioteca (ctrl + . + enter)
-      dire.Nome = "Roberta";
-      dire.Salario = 5000;
-      
-      gerenciador.Registrar(dire);
-      
-      Console.WriteLine(func.Nome);
-      Console.WriteLine(func.GetBonificacao());
-      
-      Console.WriteLine(dire.Nome);
-      Console.WriteLine(dire.GetBonificacao());
-      
-      Console.WriteLine("Total de bonificações:" + gerenciador.GetBonificacao());
-      
+      CalcularBonificacao();
       Console.ReadLine();
+      
+    }
+    
+    public static void CalcularBonificacao()
+    {
+      GerenciadorBonificacao gerenciadorBonificacao = new GerenciadorBonificacao();
+      
+      Designer pedro = new Designer("833.222.048-39");
+      pedro.Nome = "Pedro";
+      
+      Diretor roberta = new Diretor("159.753.398-04");
+      roberta.Nome = "Roberta";
+      
+      Auxiliar igor = new Auxiliar("981.198.778-53");
+      igor.Nome = "Igor";
+      
+      GerenteDeConta camila = new GerenteDeConta("326.985.628-89");
+      camila.Nome = "Camila";
+      
+      gerenciadorBonificacao.Registrar(pedro);
+      gerenciadorBonificacao.Registrar(roberta);
+      gerenciadorBonificacao.Registrar(igor);
+      gerenciadorBonificacao.Registrar(camila);
+      
+      Console.WriteLine("Total de Bonificações do Mês:" + gerenciadorBonificacao.GetTotalBonificacao());
       
     }
   }
