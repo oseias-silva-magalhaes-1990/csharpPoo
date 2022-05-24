@@ -5,7 +5,6 @@ namespace ByteBank.Funcionario
 {
   public class GerenteDeConta : FuncionarioAutenticavel//Herança - herda atributos da classe base
   {
-  
     public GerenteDeConta(string cpf) : base (4000, cpf)//Atribuição de parâmetro para obedecer regra do construtor da classe base
     {
       Console.WriteLine("Criando um GerenteDeConta");
