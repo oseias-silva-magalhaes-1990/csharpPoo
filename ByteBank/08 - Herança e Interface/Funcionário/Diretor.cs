@@ -12,7 +12,7 @@ namespace ByteBank
   
     public override double GetBonificacao()//Definindo como override informa-se que o método é parte de uma classe pai
     {
-      return Salario + base.GetBonificacao();
+      return Salario * 0.5;
     }
     
     public override void AumentarSalario()
