@@ -6,7 +6,7 @@ namespace Bytebank.Funcionarios
   {
     public string Senha {set; get;}
   
-    public FuncionarioAutenticavel(double salario, string cpf): base (salrio, cps)
+    public FuncionarioAutenticavel(double salario, string cpf): base (salario, cpf)
     {
       
     }
