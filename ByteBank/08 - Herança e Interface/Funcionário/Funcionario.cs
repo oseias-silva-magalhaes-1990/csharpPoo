@@ -23,11 +23,6 @@ namespace ByteBank.Funcionario
     public abstract double GetBonificacao();
     
     public abstract void AumentarSalario();
-    
-    public void Autenticar(string senha)
-    {
-      return Senha == senha;
-    }
       
     /*
     public virtual double GetBonificacao()//Definindo como virtual o método pode ser utilziado por uma classe derivada e sofrer mudanças em sua estrutura
