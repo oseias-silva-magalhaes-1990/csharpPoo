@@ -1,6 +1,6 @@
 using System;
 using ByteBank.Funcionario;
-using ByteBank.SistemaInterno;
+using ByteBank.SistemA;
 
 namespace ByteBank
 {
