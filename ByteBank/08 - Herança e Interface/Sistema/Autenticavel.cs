@@ -3,7 +3,7 @@ using ByteBank.Funcionario;
 
 namespace ByteBank.Sistema
 {
- public interface Autenticavel
+ public interface IAutenticavel
   {
     bool Autenticar(string senha);
   }
