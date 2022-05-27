@@ -11,8 +11,8 @@ namespace _07_ByteBank
 		
                 public Cliente Titular {get; set;}
                 
-		public int Agencia{get; set;}
-		public int Numero{get; set;}
+		public int Numero {get;}//Campo somente de leitura
+                public int Agencia {get;}//Campo somente de leitura
 		
 		public ContaCorrente(int agencia, int numero){
 			Agencia = agencia;
