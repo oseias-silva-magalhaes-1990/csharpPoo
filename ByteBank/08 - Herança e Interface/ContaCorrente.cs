@@ -15,8 +15,9 @@ namespace _07_ByteBank
                 public int Agencia {get;}//Campo somente de leitura
 		
 		public ContaCorrente(int agencia, int numero){
-			Agencia = agencia;
-			Numero = numero;
+			//Agencia e Numero somente de leitura
+			Agencia = agencia; //Valor atribuido apenas no momento da criaçã odo objeto
+			Numero = numero;   //Valor atribuido apenas no momento da criaçã odo objeto
                         
                         TaxaOperacao = 30 / TotalDeContasCriadas;
 			TotalDeContasCriadas++;
