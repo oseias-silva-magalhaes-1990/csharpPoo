@@ -16,22 +16,21 @@ namespace _07_ByteBank
 		
 		public ContaCorrente(int agencia, int numero){
 			if(agencia <= 0)
-			    {
+			{
 				//Lançamento de exceção de argumento
-				throw new ArgumentException("O argumento agencia deve ser maior que Zero.",nameof(agencia));
-			    }
-
-		    	if(numero <= 0)
-			    {
+				throw new ArgumentException("O argumento agencia deve ser maior que Zero.", nameof(agencia));
+			}
+			
+			if(numero <= 0)
+			{
 				//Lançamento de exceção de argumento
-				throw new ArgumentException("O argumento numero deve ser maior que Zero.",nameof(numero));//nameof() é um operador e passamos um membro como argumento, e que nos devolve uma string com o nome do respectivo membro. 
-			    }
-			//Agencia e Numero somente de leitura
-			Agencia = agencia; //Valor atribuido apenas no momento da criaçã odo objeto
-			Numero = numero;   //Valor atribuido apenas no momento da criaçã odo objeto
-                        
-                        TaxaOperacao = 30 / TotalDeContasCriadas;
+			}
+            
+			Agencia = agencia;
+			Numero = numero;
+            
 			TotalDeContasCriadas++;
+			TaxaOperacao = 30 / TotalDeContasCriadas;
 		}
 		
 		private double _saldo = 100;
@@ -51,30 +50,33 @@ namespace _07_ByteBank
 				this._saldo = value; 
 			}
 		}
-
-		  public bool Sacar(double valor){
-			  
-			if(this._saldo < valor){
+		public bool Sacar(double valor){
+			
+			if(this._saldo < valor)
+			{
 				return false;
 			}
 			  
 			this._saldo -= valor;
 			return true;
-		  }
-
-		  public void Depositar(double valor){
-		  	this._saldo += valor;
+		}
+		
+		public void Depositar(double valor)
+		{
+			this._saldo += valor;
 			Console.WriteLine("Depositou");
-		  }
-
-		  public bool Transferir(double valor, ContaCorrente contaDestino){
-		  	if(this._saldo < valor){
-		  		return false;
+		}
+		
+		public bool Transferir(double valor, ContaCorrente contaDestino)
+		{
+			if(this._saldo < valor)
+			{
+				return false;
 		  	}
 			  
 		  	this._saldo -= valor;
 		  	contaDestino.Depositar(valor);
 		  	return true;
-		  }
+		}
 	}
 }
