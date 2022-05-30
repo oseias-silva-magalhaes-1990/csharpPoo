@@ -54,7 +54,7 @@ namespace _07_ByteBank
 			
 			if(this._saldo < valor)
 			{
-				throw new SaldoInsuficienteException("Saldo Insuficiente para Saque: ", valor);
+				throw new SaldoInsuficienteException(this._saldo, valor);
 			}
 			  
 			this._saldo -= valor;
