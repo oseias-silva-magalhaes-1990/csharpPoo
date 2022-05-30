@@ -37,13 +37,26 @@ namespace ByteBank
 		public int Numero{get; set;}
 		
 		public ContaCorrente(int agencia, int numero){
+        
+        	if(agencia <= 0)
+            {
+            	//Lançamento de exceção de argumento
+            	throw new ArgumentException("O argumento agencia deve ser maior que Zero.");
+            }
+            
+            if(numero <= 0)
+            {
+            	//Lançamento de exceção de argumento
+            	throw new ArgumentException("O argumento numero deve ser maior que Zero.");
+            }
+            
 			Agencia = agencia;
 			Numero = numero;
             
             //TaxaOperacao = 30 / TotalDeContasCriadas;
 			TotalDeContasCriadas++;
 		}
-		
+		 
 		private double _saldo = 100;
 		public double Saldo
 		{
@@ -372,7 +385,7 @@ public class ParceiroComercial : IAutenticavel
       ContaCorrente c1 = new ContaCorrente(400, 315253);
       //c1.Titular.Nome = "Joao";
       
-      ContaCorrente c2 = new ContaCorrente(400, 312254);
+      ContaCorrente c2 = new ContaCorrente(0, 0);
       //c2.Titular.Nome = "Maria";
 
       //Console.WriteLine(ContaCorrente.TaxaOperacao);
