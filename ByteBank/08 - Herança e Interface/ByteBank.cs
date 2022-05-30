@@ -9,7 +9,24 @@ namespace ByteBank
     static void Main(string[] args)
     {
       //CalcularBonificacao();
-      UsarSistema();
+      //UsarSistema();
+      try
+      {
+      	ContaCorrente c1 = new ContaCorrente(0, 315253);
+      }
+      catch (ArgumentException ex)
+      {
+      	Console.WriteLine("Argumento com problema: " + ex.ParamName);
+      }
+      catch (Exception ex)
+      {
+      	Console.WriteLine(ex.Message);
+      }
+      
+      //TestaDivisao(0);
+      
+      Console.ReadLine();
+      
       Console.ReadLine();
       
     }
