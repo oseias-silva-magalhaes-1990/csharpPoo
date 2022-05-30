@@ -24,7 +24,7 @@ namespace _07_ByteBank
 		    	if(numero <= 0)
 			    {
 				//Lançamento de exceção de argumento
-				throw new ArgumentException("O argumento numero deve ser maior que Zero.",nameof(numero));
+				throw new ArgumentException("O argumento numero deve ser maior que Zero.",nameof(numero));//nameof() é um operador e passamos um membro como argumento, e que nos devolve uma string com o nome do respectivo membro. 
 			    }
 			//Agencia e Numero somente de leitura
 			Agencia = agencia; //Valor atribuido apenas no momento da criaçã odo objeto
