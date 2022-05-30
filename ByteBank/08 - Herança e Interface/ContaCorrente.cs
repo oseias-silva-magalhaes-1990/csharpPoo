@@ -15,6 +15,17 @@ namespace _07_ByteBank
                 public int Agencia {get;}//Campo somente de leitura
 		
 		public ContaCorrente(int agencia, int numero){
+			if(agencia <= 0)
+			    {
+				//Lançamento de exceção de argumento
+				throw new ArgumentException("O argumento agencia deve ser maior que Zero.");
+			    }
+
+		    	if(numero <= 0)
+			    {
+				//Lançamento de exceção de argumento
+				throw new ArgumentException("O argumento numero deve ser maior que Zero.");
+			    }
 			//Agencia e Numero somente de leitura
 			Agencia = agencia; //Valor atribuido apenas no momento da criaçã odo objeto
 			Numero = numero;   //Valor atribuido apenas no momento da criaçã odo objeto
