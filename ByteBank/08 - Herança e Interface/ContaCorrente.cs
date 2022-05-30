@@ -24,7 +24,7 @@ namespace _07_ByteBank
 		    	if(numero <= 0)
 			    {
 				//Lançamento de exceção de argumento
-				throw new ArgumentException("O argumento numero deve ser maior que Zero.","agencia");
+				throw new ArgumentException("O argumento numero deve ser maior que Zero.","numero");
 			    }
 			//Agencia e Numero somente de leitura
 			Agencia = agencia; //Valor atribuido apenas no momento da criaçã odo objeto
