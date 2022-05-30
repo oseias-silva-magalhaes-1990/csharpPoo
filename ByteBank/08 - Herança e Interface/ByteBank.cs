@@ -12,11 +12,16 @@ namespace ByteBank
       //UsarSistema();
       try
       {
-      	ContaCorrente c1 = new ContaCorrente(0, 315253);
+      	ContaCorrente c1 = new ContaCorrente(435, 315253);
       }
       catch (ArgumentException ex)
       {
       	Console.WriteLine("Argumento com problema: " + ex.ParamName);
+      }
+      catch (SaldoInsuficienteException ex)
+      {
+        Console.WriteLine(ex.Message);
+        Console.WriteLine("Exceção do tipo Saldo Insuficiente Exceptioon");
       }
       catch (Exception ex)
       {
