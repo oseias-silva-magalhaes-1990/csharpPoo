@@ -1,6 +1,7 @@
 using System;
 using ByteBank.Funcionario;
-using ByteBank.SistemA;
+using ByteBank.Sistema;
+using LeitorDeArquivo;
 
 namespace ByteBank
 {
@@ -8,42 +9,37 @@ namespace ByteBank
   {
     static void Main(string[] args)
     {
-      //CalcularBonificacao();
-      //UsarSistema();
-      try
-      {
-      	ContaCorrente conta1 = new ContaCorrente(4564, 789684);
-        ContaCorrente conta2 = new ContaCorrenet(7891, 456794);
-        
-        // conta1.Transferir(10000, conta2);
-         conta1.Sacar(10000);
-      }
-      catch (ArgumentException ex)
-      {
-      	Console.WriteLine("Argumento com problema: " + ex.ParamName);
-      }
-      catch (SaldoInsuficienteException ex)
-      {
-        Console.WriteLine(ex.Message);
-        Console.WriteLine("Exceção do tipo Saldo Insuficiente Exceptioon");
-      }
-      catch (Exception e)
-      {
-      	Console.WriteLine(e.Message);
-                Console.WriteLine(e.StackTrace);
+      CarregarContas();
 
-                Console.WriteLine("Informações da INNER EXCEPTION (exceção interna):");
+            Console.WriteLine("Execução finalizada. Tecle enter para sair");
+            Console.ReadLine();
+    }
+    
+    private static void CarregarContas()
+    {
+        LeitorDeArquivo leitor = null;
+      
+        try 
+        {
+              leitor = new LeitorDeArquivo("contas.txt");
 
-                Console.WriteLine(e.InnerException.Message);
-                Console.WriteLine(e.InnerException.StackTrace);
-      }
-      
-      //TestaDivisao(0);
-      
-      Console.ReadLine();
-      
-      Console.ReadLine();
-      
+              leitor.LerProximaLinha();
+              leitor.LerProximaLinha();
+              leitor.LerProximaLinha();
+
+        }
+        catch(IOException)
+        {
+              Console.WriteLine("Exceção do tipo IOException capturada e tratada!");
+        }
+        finally
+        {
+              if(leitor != null
+               {
+
+                 leitor.Fechar();
+               } 
+        }
     }
     
     public static void UsarSistema()
@@ -94,6 +90,41 @@ namespace ByteBank
       
       Console.WriteLine("Total de Bonificações do Mês:" + gerenciadorBonificacao.GetTotalBonificacao());
       
+    }
+    
+    private static void TestaInnerException()
+    {
+      try
+      {
+      	ContaCorrente conta1 = new ContaCorrente(4564, 789684);
+        ContaCorrente conta2 = new ContaCorrenet(7891, 456794);
+        
+        // conta1.Transferir(10000, conta2);
+         conta1.Sacar(10000);
+      }
+      catch (ArgumentException ex)
+      {
+      	Console.WriteLine("Argumento com problema: " + ex.ParamName);
+      }
+      catch (SaldoInsuficienteException ex)
+      {
+        Console.WriteLine(ex.Message);
+        Console.WriteLine("Exceção do tipo Saldo Insuficiente Exceptioon");
+      }
+      catch (Exception e)
+      {
+      	Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+
+                Console.WriteLine("Informações da INNER EXCEPTION (exceção interna):");
+
+                Console.WriteLine(e.InnerException.Message);
+                Console.WriteLine(e.InnerException.StackTrace);
+      }
+      
+      //TestaDivisao(0);
+      
+      Console.ReadLine();
     }
   }
 }
