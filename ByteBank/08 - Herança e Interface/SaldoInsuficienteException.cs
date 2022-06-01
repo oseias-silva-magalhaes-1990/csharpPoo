@@ -22,9 +22,14 @@ namespace ByteBank
       ValorSaque = valorSaque;
     }
     
-    public SaldoInsuficienteException(string mensagem) : base(mensagem)
-    {
-    
-    }
+    public SaldoInsuficienteException(string mensagem)
+            : base(mensagem)
+        {
+        }
+        
+    public SaldoInsuficienteException(string mensagem, Exception excecaoInterna)
+            : base(mensagem, excecaoInterna)
+        {
+        }
   }
 }
