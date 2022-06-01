@@ -2,7 +2,7 @@ using System;
 
 namespace ByteBank
 {
-    public class LeitorDeArquivo
+    public class LeitorDeArquivo : IDisposable
     {
         public string Arquivo { get; }
 
@@ -24,6 +24,11 @@ namespace ByteBank
         public void Fechar()
         {
                 Console.WriteLine("Fechando arquivo.");
+        }
+        
+        public void Dispose()
+        {
+        
         }
     }
 }
