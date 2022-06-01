@@ -4,7 +4,7 @@ using System;
 
 namespace ByteBank
 {
-  class SaldoInsuficienteException : Exception
+  class SaldoInsuficienteException : OperacaoFinanceiraException
   {
     
     public double Saldo{ get;}
