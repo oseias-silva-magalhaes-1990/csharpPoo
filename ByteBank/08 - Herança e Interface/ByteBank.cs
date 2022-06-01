@@ -9,16 +9,26 @@ namespace ByteBank
   {
     static void Main(string[] args)
     {
-      CarregarContas();
-
-            Console.WriteLine("Execução finalizada. Tecle enter para sair");
-            Console.ReadLine();
+      try
+      {
+          CarregarContas();
+      }
+      catch(Exception)
+      {
+          Console.WriteLine("CATCH NO METODO MAIN");
+      }
     }
     
     private static void CarregarContas()
     {
-        LeitorDeArquivo leitor = null;
+        using (LeitorDeArquivo leitor = new LeitorDeArquivo("teste.txt"))
+        {
+                leitor.LerProximaLinha();
+        }
       
+      /*
+        LeitorDeArquivo leitor = null;
+      //-----------------------------------------------------------------------------
         try 
         {
               leitor = new LeitorDeArquivo("contas.txt");
@@ -40,6 +50,7 @@ namespace ByteBank
                  leitor.Fechar();
                } 
         }
+        */
     }
     
     public static void UsarSistema()
