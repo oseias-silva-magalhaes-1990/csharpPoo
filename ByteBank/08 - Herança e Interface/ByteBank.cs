@@ -23,9 +23,15 @@ namespace ByteBank
         Console.WriteLine(ex.Message);
         Console.WriteLine("Exceção do tipo Saldo Insuficiente Exceptioon");
       }
-      catch (Exception ex)
+      catch (Exception e)
       {
-      	Console.WriteLine(ex.Message);
+      	Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+
+                Console.WriteLine("Informações da INNER EXCEPTION (exceção interna):");
+
+                Console.WriteLine(e.InnerException.Message);
+                Console.WriteLine(e.InnerException.StackTrace);
       }
       
       //TestaDivisao(0);
