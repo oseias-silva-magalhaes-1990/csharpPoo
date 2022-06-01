@@ -12,7 +12,11 @@ namespace ByteBank
       //UsarSistema();
       try
       {
-      	ContaCorrente c1 = new ContaCorrente(435, 315253);
+      	ContaCorrente conta1 = new ContaCorrente(4564, 789684);
+        ContaCorrente conta2 = new ContaCorrenet(7891, 456794);
+        
+        // conta1.Transferir(10000, conta2);
+         conta1.Sacar(10000);
       }
       catch (ArgumentException ex)
       {
