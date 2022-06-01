@@ -10,6 +10,9 @@ namespace _07_ByteBank
 		//Método Get público e Set privado
 		
                 public Cliente Titular {get; set;}
+		
+		public int ContadorSaquesNaoPermitidos { get; private set; }
+        	public int ContadorTransferenciasNaoPermitidas { get; private set; }
                 
 		public int Numero {get;}//Campo somente de leitura
                 public int Agencia {get;}//Campo somente de leitura
@@ -54,7 +57,7 @@ namespace _07_ByteBank
 			
 			if(valor < 0)
 			{
-			throw new ArgumentException("Valor inválido para saque.", nameof(valor));
+				throw new ArgumentException("Valor inválido para saque.", nameof(valor));
 			}
 			
 			if(this._saldo < valor)
@@ -76,10 +79,17 @@ namespace _07_ByteBank
 		{
 			if(valor < 0)
 			{
-			throw new ArgumentException("Valor inválido para transferência.", nameof(valor));
+				throw new ArgumentException("Valor inválido para transferência.", nameof(valor));
 			}
-			
-			Sacar(valor);
+			try
+			{
+				Sacar(valor);
+			}
+			catch(SaldoInsuficienteException ex)
+			{
+				ContadorTransferenciasNaoPermitidas++;
+				throw new SaldoInsuficienteException("Operação não realizada.", ex);
+			}
 		  	contaDestino.Depositar(valor);
 		}
 	}
