@@ -1,6 +1,6 @@
 using System;
 
-namespace ByteBank.Funcionario
+namespace ByteBank.Modelos.Funcionario
 {
   public abstract class Funcionario//Classe abstrata pois não deve ser instanciada
   {
