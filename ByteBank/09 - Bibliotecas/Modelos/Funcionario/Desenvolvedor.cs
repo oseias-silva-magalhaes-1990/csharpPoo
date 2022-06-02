@@ -1,6 +1,6 @@
 using System;
 
-namespace ByteBank.Funcionario
+namespace ByteBank.Modelos.Funcionario
 {
   public class Desenvolvedor : Funcionario //Herança - herda atributos da classe base
   {
