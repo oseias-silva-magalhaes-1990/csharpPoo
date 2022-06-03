@@ -10,7 +10,7 @@ namespace ByteBank.Modelos.Funcionario
       Console.WriteLine("Criando um Desenvolvedor");
     }
   
-    internal override double GetBonificacao()//Definindo como override informa-se que o método é parte de uma classe pai
+    internal protected override double GetBonificacao()//Definindo como override informa-se que o método é parte de uma classe pai
     {
       return Salario * 0.1;
     }
