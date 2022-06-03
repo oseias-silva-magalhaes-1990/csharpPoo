@@ -15,7 +15,7 @@ namespace ByteBank.Funcionario
         //Espaço para código
         }
 
-        internal override double GetBonificacao()
+        protected override double GetBonificacao()
         {
         //Espaço para código
         }
