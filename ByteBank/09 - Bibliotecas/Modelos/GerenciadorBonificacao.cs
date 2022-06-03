@@ -10,7 +10,7 @@ namespace ByteBank.Modelos
       _totalBonificacao += func.GetBonificacao();
     }
     
-    public double GetTotalBonificacao(){
+    internal double GetTotalBonificacao(){
       return _totalBonificacao;
     }
     
