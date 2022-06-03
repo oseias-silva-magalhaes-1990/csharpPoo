@@ -2,7 +2,7 @@ using System;
 
 namespace ByteBank.Modelos
 {
-  public class AutenticacaoHelper
+  internal class AutenticacaoHelper
   {
     public bool CompararSenha(string senhaVerdadeira, string senhaTentativa)
     {
