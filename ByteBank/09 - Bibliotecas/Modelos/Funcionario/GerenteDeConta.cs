@@ -9,7 +9,7 @@ namespace ByteBank.Modelos.Funcionario
       Console.WriteLine("Criando um GerenteDeConta");
     }
   
-    public override double GetBonificacao()//Definindo como override informa-se que o método é parte de uma classe pai
+    internal override double GetBonificacao()//Definindo como override informa-se que o método é parte de uma classe pai
     {
       return Salario * 0.25;
     }
