@@ -20,7 +20,7 @@ namespace ByteBank.Modelos.Funcionario
       Console.WriteLine("Criando um Funcionário");
     }
     
-    internal abstract double GetBonificacao();
+    internal protected abstract double GetBonificacao();
     
     public abstract void AumentarSalario();
       
