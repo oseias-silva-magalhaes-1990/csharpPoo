@@ -15,7 +15,20 @@ namespace ByteBank.SistemaAgencia
       Funcionario funcionario = null;
       Console.WriteLine(conta.Numero);
       
+      //Lidando com Datas
+      DateTime dataFimPagamento = new DateTime(2018, 8, 17);
+      DateTime dataCorrente = DateTime.Now;
+      
+      //TimeSpan diferenca = dataFimPagamento - dataCorrente;//TimeSpan recebe a diferença entre datas.
+      
+      TimeSpan diferenca = TimeSpan.FromMinutes(60); 
+      
+      string mensagem = "Vencimento em: " + TimeSpanHumanizeExtensions.Humanize(diferenca); //Humanize é uma biblioteca .dll especializada para a humanizaçã ode escrita de resultados no console.
+      
+      Console.WriteLine(mensagem);
+      
       Console.ReadLine();
     }
+
   }
 }
