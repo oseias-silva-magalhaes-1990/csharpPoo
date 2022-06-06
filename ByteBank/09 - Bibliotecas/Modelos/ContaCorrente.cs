@@ -61,6 +61,13 @@ namespace ByteBank.Modelos
 				this._saldo = value; 
 			}
 		}
+		
+		/// <summary>
+		/// Realiza o saque e atualzia o valor da propriedade <see cref="Saldo"/>
+		/// </sumary>
+		/// <exception cref="ArgumentException">Exceção lançada quando um valor negativo é utilizado no argumento <paramref name="valor"/>.</exception>
+		/// <exception cref="SaldoInsuficienteException">Exceção lançada quando o valor de <paramref name="valor"/> é maior que a propriedade <see cref="Saldo">.</exception>
+		/// <param name="valor">Representa o valor do saque, deve ser maior que zero e menor que o <see cref="Saldo"/></param>
 		public bool Sacar(double valor){
 			
 			if(valor < 0)
@@ -70,6 +77,7 @@ namespace ByteBank.Modelos
 			
 			if(this._saldo < valor)
 			{
+				ContadorSaquesNaoPermitidos++;
 				throw new SaldoInsuficienteException(Saldo, valor);
 			}
 			  
